@@ -2,9 +2,6 @@
 using System.Text;
 using System;
 
-//negocjacje tylko z ukrainą
-//ukraina tlykos traci więcej
-
 namespace AesApi.Services
 {
     public class AesService
