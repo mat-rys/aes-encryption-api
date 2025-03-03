@@ -1,0 +1,6 @@
+@AesApi_HostAddress = http://localhost:5251
+
+GET {{AesApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
