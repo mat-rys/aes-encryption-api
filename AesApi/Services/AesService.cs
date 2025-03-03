@@ -9,7 +9,7 @@ namespace AesApi.Services
 {
     public class AesService
     {
-        public static string Encrypt(string plaintext, string key)
+        public string Encrypt(string plaintext, string key)
         {
             try
             {
@@ -32,7 +32,7 @@ namespace AesApi.Services
             }
         }
 
-        public static string Decrypt(string ciphertext, string key)
+        public string Decrypt(string ciphertext, string key)
         {
             try
             {
@@ -55,7 +55,7 @@ namespace AesApi.Services
             }
         }
 
-        public static string GenerateBase64Key(int keySize)
+        public string GenerateBase64Key(int keySize)
             {
                 using (var aesAlg = Aes.Create())
                 {

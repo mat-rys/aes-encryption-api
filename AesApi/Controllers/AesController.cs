@@ -9,13 +9,20 @@ namespace AesApi.Controllers
     [ApiController]
     public class AesController : ControllerBase
     {
+        private readonly AesService _aesService;
+        
+        public AesController(AesService aesService)
+        {
+            _aesService = aesService;
+        }
+
         [HttpPost("encrypt")]
         [EndpointSummary("Encrypt text with AES algorythm, using provided key.")]
         public ActionResult<string> EncryptWithAes([FromBody] EncryptionModel encryptionModel)
         {
             try
             {
-                return AesService.Encrypt(encryptionModel.Plaintext, encryptionModel.Key);
+                return _aesService.Encrypt(encryptionModel.Plaintext, encryptionModel.Key);
             }
             catch (FormatException ex)
             {
@@ -29,7 +36,7 @@ namespace AesApi.Controllers
         {
             try
             {
-                return AesService.Decrypt(decryptionModel.EncryptedText, decryptionModel.Key);
+                return _aesService.Decrypt(decryptionModel.EncryptedText, decryptionModel.Key);
             }
             catch (FormatException ex) 
             {
@@ -41,7 +48,7 @@ namespace AesApi.Controllers
         [EndpointSummary("Generates a Base64-encoded AES key of the specified size.")]
         public string GenerateBase64Key(int keySize)
         {
-            return AesService.GenerateBase64Key(keySize);
+            return _aesService.GenerateBase64Key(keySize);
         }
     }
 }
