@@ -8,6 +8,8 @@ namespace AesApi.Services
     {
         public string Encrypt(string plaintext, string key)
         {
+            if (string.IsNullOrEmpty(key) || string.IsNullOrEmpty(plaintext))
+                throw new ArgumentNullException();
             try
             {
                 using (Aes aesAlg = Aes.Create())
@@ -31,6 +33,8 @@ namespace AesApi.Services
 
         public string Decrypt(string ciphertext, string key)
         {
+            if (string.IsNullOrEmpty(key) || string.IsNullOrEmpty(ciphertext))
+                throw new ArgumentNullException();
             try
             {
                 using (Aes aesAlg = Aes.Create())

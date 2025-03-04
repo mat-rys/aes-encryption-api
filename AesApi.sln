@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AesApi", "AesApi\AesApi.csproj", "{A132B313-6985-4FBD-8B9B-20418CE048C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{1F33F454-1726-4612-A865-7A2204927C9B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{A132B313-6985-4FBD-8B9B-20418CE048C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A132B313-6985-4FBD-8B9B-20418CE048C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A132B313-6985-4FBD-8B9B-20418CE048C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F33F454-1726-4612-A865-7A2204927C9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F33F454-1726-4612-A865-7A2204927C9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F33F454-1726-4612-A865-7A2204927C9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F33F454-1726-4612-A865-7A2204927C9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
