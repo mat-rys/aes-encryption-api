@@ -4,11 +4,11 @@ using Moq;
 
 namespace Tests
 {
-    public class UnitTest1
+    public class AesServiceTest
     {
         private readonly AesService _aesService;
 
-        public UnitTest1()
+        public AesServiceTest()
         {
             _aesService = new AesService();
         }
